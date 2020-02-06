@@ -55,44 +55,10 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
-
-### Association
-- belongs_to :user
-- belongs_to :group
-- has_many : bodies
-- has_many : images
-
-## bodyテーブル
-
-|Column|Type|Options|
-|------|----|-------|
 |body|text|null: false, foreign_key: false|
-|message_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :message
-
-
-# imageテーブル
-
-|Column|Type|Options|
-|------|----|-------|
 |image|string|null: false, foreign_key: false|
-|message_id|integer|null: false, foreign_key: true|
+
 
 ### Association
-- belongs_to : message
-
-
-
-## groups_usersテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to :group
 - belongs_to :user
+- belongs_to :group
