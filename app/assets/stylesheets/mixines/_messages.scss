@@ -1,0 +1,22 @@
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin chat {
+  height: 14px;
+  color: #333333;
+  display: flex;
+}
+@mixin date {
+  color: #999999;
+  font-size: 12px;
+  margin: 0 0 15px 20px;
+}
+@mixin message {
+  height: 20px;
+  font-size: 14px;
+  margin: 0 0 15px 20px;
+  color: #434A54;
+}
