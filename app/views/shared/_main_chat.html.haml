@@ -1,0 +1,32 @@
+.contents
+  .contents__Top
+    .contents__group
+      .contents__test
+        test
+        .contents__member
+          member
+      .contents__edit
+        = link_to "#", class: "contents__btn" do
+          Edit
+  .contents__middle
+    .contents__chat1
+      masa
+      .contents__date1
+        2019/09/12
+    .contents__message1
+      おはよう
+    .contents__chat2
+      masa
+      .contents__date2
+        2019/09/12
+    .contents__message2
+      今日は雨
+  .contents__down
+    .contents__form
+      %form.new_message
+        .input-form
+        %input{type: "input", class: "input-form__text", placeholder: "  コメントを入力して下さい"}
+          %label{class: "input-form__label"}
+            = icon('fas', 'image', class: "input-form__icon")
+            %input{type: "file", class: "input-form__file"}
+        %input{type: "submit", class: "input-form__submit"}
