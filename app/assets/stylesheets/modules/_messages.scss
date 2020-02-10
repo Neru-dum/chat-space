@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  height: 100%;
-  width: 100%;
 }
 
 .wrapper {
@@ -22,18 +20,20 @@
         color: $white-color;
       }
         &__btn{
-          width: 60px;
           display: flex;
           text-decoration: none;
           color: $white-color;
           text-align: right;
+            &__icon0{
+              margin-left: 140px;
+            }
             &__icon1{
               padding-left: 5px;
             }
         }
       &__group{
         width: 100%;
-        height: 100vh;
+        height: 88vh;
         display: flex;
       }
         &__test{
@@ -49,12 +49,14 @@
   }
   .contents {
     background-color: #fafafa;
+    position: relative;
     &__Top{
-      height: 100px;
       width: calc(100vw - 300px);
     }
       &__group{
+        height: 100px;
         display: flex;
+        justify-content: space-between;
         background-color: $white-color;
       }
         &__test{
@@ -106,13 +108,12 @@
         @include message;
       }
     &__down{
-      height: 90px;
       width: calc(100vw - 300px);
       position: absolute;
       bottom: 0;
+      margin-bottom: 35px;
     }
     &__form{
-      background-color: #d2d2d2;
       .new_message{
         @include center;
         .input-form{

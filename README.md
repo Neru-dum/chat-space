@@ -28,9 +28,9 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false, foreign_key: true|
-|name|string|null: true, foregin_key: true, unique: true|
-|e-mail|integer|null: true, foregin_key:false, unique: true|
-|password|integer|null: true, foregin_key:false, unique: true|
+|name|string|null: false, foregin_key: true, unique: true|
+|e-mail|string|null: false, foregin_key:false, unique: true|
+|password|string|null: false, foregin_key:false, unique: true|
 
 ### Association
 - has_many :messages
