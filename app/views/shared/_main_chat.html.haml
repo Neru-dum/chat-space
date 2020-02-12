@@ -2,31 +2,23 @@
   .contents__Top
     .contents__group
       .contents__test
-        aaaaa
+        = @group.name
         .contents__member
-          member
+          - @group.users.each do |user|
+            = user.name
+
       .contents__edit
-        = link_to groups_path(current_user), class: "contents__btn" do
+        = link_to edit_group_path(current_user), class: "contents__btn" do
           Edit
   .contents__middle
-    .contents__chat1
-      masa
-      .contents__date1
-        2019/09/12
-    .contents__message1
-      おはよう
-    .contents__chat2
-      masa
-      .contents__date2
-        2019/09/12
-    .contents__message2
-      今日は雨
+    = render @messages
   .contents__down
     .contents__form
-      %form.new_message
+      .new_message
         .input-form
-        %input{type: "input", class: "input-form__text", placeholder: "  コメントを入力して下さい"}
-          %label{class: "input-form__label"}
-            = icon('fas', 'image', class: "input-form__icon")
-            %input{type: "file", class: "input-form__file"}
-        %input{type: "submit", class: "input-form__submit"}
+          = form_for [@group, @message] do |f|
+            = f.text_field :content, class: "input-form__text", placeholder: "コメントを入力してください"
+            = f.label :image, class: 'input-form__label' do
+              = icon('fas', 'image', class: "input-form__icon")
+              = f.file_field :image, class: 'input-form__file'
+            = f.submit 'Send', class: 'input-form__submit'
