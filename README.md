@@ -66,7 +66,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|body|text|null: false, foreign_key: false|
+|content|text|null: false, foreign_key: false|
 |image|string|null: false, foreign_key: false|
 
 
