@@ -5,8 +5,10 @@
 }
 @mixin chat {
   height: 14px;
+  margin: 35px 0 15px 20px;
   color: #333333;
   display: flex;
+  line-height: 14px;
 }
 @mixin date {
   color: #999999;
