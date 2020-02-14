@@ -1,9 +1,8 @@
 $(function(){
   function buildHTML(message){
-    // 「もしメッセージに画像が含まれていたら」という条件式
+
     if (message.image) {
       var html = 
-         //メッセージに画像が含まれる場合のHTML
             `<div class="contents__messages">
               <div class="contents__messages__chat1">
                 ${message.user_name}
@@ -21,7 +20,6 @@ $(function(){
      return html;
     } else {
       var html = 
-      //メッセージに画像が含まれない場合のHTMLを作る
        ` <div class="contents__messages">
           <div class="contents__messages__chat1">
             ${message.user_name}
@@ -45,8 +43,8 @@ $('#new_message').on('submit',function(e){
     var formData = new FormData(this);
     var url      = $(this).attr('action');
     $.ajax({
-      url: url,  //同期通信でいう『パス』
-      type: 'POST',  //同期通信でいう『HTTPメソッド』
+      url: url,  
+      type: 'POST',  
       data: formData,
       dataType: 'json',
       processData: false,
