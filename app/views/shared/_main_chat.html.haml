@@ -1,7 +1,7 @@
 .contents
   .contents__Top
     .contents__group
-      .contents__test
+      .contents__group-name
         = @group.name
         .contents__member
           - @group.users.each do |user|
@@ -10,7 +10,7 @@
       .contents__edit
         = link_to edit_group_path(current_user), class: "contents__btn" do
           Edit
-  .contents__middle
+  .contents__main
     = render @messages
   .contents__down
     .contents__form
