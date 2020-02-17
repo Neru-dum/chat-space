@@ -2,50 +2,48 @@ $(function(){
   var buildHTML = function(contents__messages) {
     if (contents__messages.content && contents__messages.image) {
       var html = 
-      `<div class="contents__messages" data-contents--message-id=` + contents__messages.id + `>` +
-          `<div class="contents__messages__chat1">` +
-              contents__messages.user_name +
-              
-              `<div class="contents__messages__date1">` +
-                contents__messages.created_at +
-              `</div>` +
-           `</div>` +
-        `<div class="contents__messages__message1">` +
-          `<p class="lower-message__content">` +
-          contents__messages.content +
-          `</p>` +
-          `<img src="` + contents__messages.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      `<div class="contents__messages" data-contents--message-id=${contents__messages.id} >
+           <div class="contents__messages__chat1">
+              ${contents__messages.user_name}
+              <div class="contents__messages__date1">
+                ${contents__messages.created_at}
+              </div>
+           </div>
+         <div class="contents__messages__message1">
+            <p class="lower-message__content">
+              ${contents__messages.content}
+            </p>
+            <img src=${contents__messages.image} class="lower-message__image" >
+         </div>
+       </div>`
     } else if (contents__messages.content) {
       var html = 
-      `<div class="contents__messages" data-contents--message-id=` + contents__messages.id + `>` +
-          `<div class="contents__messages__chat1">` +
-                contents__messages.user_name +
-                `<div class="contents__messages__date1">` +
-                  contents__messages.created_at +
-                `</div>` +
-          `</div>` +
-          `<div class="contents__messages__message1">` +
-            `<p class="lower-message__content">` +
-            contents__messages.content +
-            `</p>` +
-          `</div>` +
-      `</div>`
+     ` <div class="contents__messages" data-contents--message-id=${contents__messages.id}>
+          <div class="contents__messages__chat1">
+            ${contents__messages.user_name}
+                <div class="contents__messages__date1">
+                  ${contents__messages.created_at}
+                </div>
+          </div>
+          <div class="contents__messages__message1">
+            <p class="lower-message__content">
+              ${contents__messages.content}
+            </p>
+          </div>
+       </div>`
     } else if (contents__messages.image) {
       var html = 
-      `<div class="contents__messages" data-contents--message-id=` + contents__messages.id + `>` +
-          `<div class="contents__messages__chat1">` +
-          contents__messages.user_name +
-          
-            `<div class="contents__messages__date1">` +
-            contents__messages.created_at +
-            `</div>` +
-        `</div>` +
-        `<div class="contents__messages__message1">` +
-          `<img src="` + contents__messages.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+      `<div class="contents__messages" data-contents--message-id=${contents__messages.id}>
+        <div class="contents__messages__chat1">
+            ${contents__messages.user_name}
+              <div class="contents__messages__date1">
+                ${contents__messages.created_at}
+              </div>
+        </div>
+        <div class="contents__messages__message1">
+          <img src=${contents__messages.image} class="lower-message__image" >
+        </div>
+      </div>`
     };
     return html;
   };
@@ -69,7 +67,7 @@ $(function(){
       }
     })
     .fail(function() {
-      console.log('error');
+      alert("エラーが出ています。");
     });
   };
  $('#new_message').on('submit',function(e){
