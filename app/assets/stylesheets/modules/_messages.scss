@@ -98,7 +98,7 @@ body{
         overflow: scroll;
       }
         &__messages{
-          height: 100px;
+          height: 50px;
           &__chat1{
             @include chat;
           }
@@ -109,7 +109,7 @@ body{
             @include message;
           }
             img.lower-message__image{
-              width: 100%;
+              width: 800px;
             } 
         }
       &__down{
