@@ -87,7 +87,7 @@ body{
             line-height: 40px;
             font-size: 20px;
             margin: 28px 30px 20px 20px;
-            border: solid 3px $akua-color;
+            border: solid 1px $akua-color;
           }
             &__btn{
               text-decoration: none;
@@ -99,7 +99,7 @@ body{
         overflow: scroll;
       }
         &__messages{
-          height: 200px;
+          height: 100px;
           &__chat1{
             @include chat;
           }
@@ -116,7 +116,7 @@ body{
       &__down{
         height: 100px;
         width: calc(100vw - 300px);
-        background-color: $white-color;
+        background-color: rgb(184, 178, 178);
       }
         &__form{
           .new_message{
@@ -127,7 +127,7 @@ body{
               position: absolute;
               &__text{
                 height: 50px;
-                width: 600px;
+                width: 1000px;
                 position: relative;
               }
                 &__label{
@@ -141,7 +141,7 @@ body{
                     text-align: center;
                     line-height: 50px;
                     font-size: 30px;
-                    margin-left: 230px;
+                    margin-left: 380px;
                   }
                   &__file{
                     display: none;
@@ -149,6 +149,7 @@ body{
                   
                 &__submit{
                   position: relative;
+                  color: white;
                   height: 50px;
                   width: 100px;
                   background-color: $akua-color;
