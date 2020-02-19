@@ -19,9 +19,9 @@ body{
       }
         &__icon{
           height: 20px;
-          width: 260px;
+          width: 300px;
+          margin-left: 20px;
           display: flex;
-          justify-content: space-between;
           color: $white-color;
         }
           &__btn{
@@ -29,11 +29,12 @@ body{
             color: $white-color;
             text-align: right;
               &__icon0{
-                margin-left: 140px;
+                margin-left: 160px;
                 color: $white-color;
               }
               &__icon1{
-                padding-left: 5px;
+                margin-left: 5px;
+
               }
           }
         &__ber{
